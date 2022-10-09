@@ -1,11 +1,11 @@
-# template_ds_project
+# 机器学习项目模版
 
 <p align="center">
   <a href="" rel="noopener">
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">ds_proj_v1</h3>
+<h3 align="center">ml template</h3>
 
 <div align="center">
 
@@ -15,35 +15,35 @@
 ---
 
 
-## 🧐 About <a name = "about"></a>
+## 🧐 关于 <a name = "about"></a>
 
-ds project
+用于机器学习项目规范
 
-## 🔖 Project structure
+## 🔖 项目结构
 
 ```
-ds_proj_v1/
-|- bin/          # contains scripts and main files that should be run
-|- config/       # config files
-|- notebooks/    # notebooks for EDA and exploration
-|- secrets       # contains api keys and secret parameters. It should be ignored from git
-|- src/          # source code - contains functions
-|- tests/        # Test files should mirror the src folder
-|- Makefile      # automatize taks through make utility
+ml_template/
+|- bin/          # 包含可执行的的脚本和main文件
+|- config/       # 配置文件
+|- notebooks/    # 用于EDA探索和建模的的notebooks
+|- secrets       # 包含api密钥和秘密参数。如果上传至git需要将该项隐藏或加入.gitignore文件
+|- src/          # 源代码 - 包含核心功能
+|- tests/        # 测试文件应该是src文件夹的镜像
+|- Makefile      # 通过make utility使任务自动化
 ```
 
-## 🏁 Getting Started <a name = "getting_started"></a>
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## 🏁 操作指南 <a name = "getting_started"></a>
+这些说明将使你在本地机器上建立和运行一个项目的副本，目的是用于开发和测试。
 
-### Clone the project 
+### 克隆该项目
 ```
 git clone https
 ```
 
-## Setup your environement and install project dependencies
+## 设置你的环境并安装项目的依赖
 ```
-conda create -n ds_proj_v1 python=1.0
-source activate ds_proj_v1
+conda create -n ml_template python=1.0
+source activate ml_template
 
 
 python -m pip install pip-tools
@@ -51,33 +51,35 @@ pip-compile --output-file requirements.txt requirements.in requirements_dev.in
 python -m pip install -r requirements.txt
 ```
 
-### Installing
+### 安装
 
-## 🔧 Running the tests
-Tests are implemented in ./tests, you need to run the following command to run them.
+## 🔧 运行测试
+编写好的测试文件置于 ./tests 目录下， 你需要运行以下命令来执行它们。
 ```
 make tests
 ```
 
-## 🚀 Deployment
-Add additional notes about how to deploy this on a live system.
+## 🚀 部署
+添加关于如何在实时系统（生产）上部署的附加说明。
 
-## 🎈 Contributions
-To contribute in this project, please setup locally the project following the steps  in Getting started section.
-We use few packages to guarantee high quality code. Before commiting you can run:
-To format you code using black
+## 🎈 贡献
+如果团队成员想要在这个项目中做出贡献，请按照开始部分的步骤在本地设置该项目。
+
+我们使用尽量少的包来保证高质量的代码。在提交之前，你可以运行：
+使用 black 来格式化你的代码
 ```
 make black
 ```
-To get warning message on non respect of pep8 code guidance:
-(the command runs on all .py files in the project)
+获得关于不符合pep8代码规范的预警信息：
+（该命令会运行项目中的所有.py文件。）
 ```
 make lint
 ```
-You can also run automatically, black, lint and few other packages to analyze and check your code base before commiting
+你也可以自动运行black、lint和其他一些软件包，在提交前分析和检查你的代码库。
+
 ```
 make precommit
 ```
 
 ##  ✍️ Authors
-ds_proj_v1 - leepand6@gmail.com
+ml_template - leepand6@gmail.com
