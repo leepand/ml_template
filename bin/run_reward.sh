@@ -1,0 +1,1 @@
+cd ../src && nohup python  rewardserver.py > ../logs/reward.log 2>&1 &

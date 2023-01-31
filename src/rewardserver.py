@@ -13,7 +13,13 @@ class RewardServer(Model):
     CONFIGURATIONS = {"rewardserver": {}}
 
     def _load(self):
-        return None
+        self.model_db = mlops_client.build_cache_store(
+            name="model_name",
+            version=3,
+            db_name="model_db.db",
+            db_type="rlite",
+            return_type="dbobj",
+        )
 
     def _predict(self, items):
         return items

@@ -1,0 +1,1 @@
+cd ../src && nohup python  recomserver.py > ../logs/recom.log 2>&1 &
