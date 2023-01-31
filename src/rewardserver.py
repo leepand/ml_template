@@ -1,4 +1,3 @@
-from banditrl.bandit import usermodel
 from mlopskit.ext.store import YAMLDataSet
 from mlopskit import Model, ModelLibrary, serving
 from mlopskit.pastry import HTTPClient
