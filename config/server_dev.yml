@@ -16,6 +16,6 @@ rewardserver:
   - 6001
   - 6002
   prebuild_path: src
-  server_name: rewarderver
+  server_name: rewardserver
   serving: true
   workers: 4
