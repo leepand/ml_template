@@ -4,8 +4,7 @@ ops_servers:
 recomserver:
   host: 0.0.0.0
   ports:
-  - 5001
-  - 5002
+  - 4001
   prebuild_path: src
   server_name: recomserver
   serving: true
@@ -13,8 +12,7 @@ recomserver:
 rewardserver:
   host: 0.0.0.0
   ports:
-  - 6001
-  - 6002
+  - 5001
   prebuild_path: src
   server_name: rewardserver
   serving: true
