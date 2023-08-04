@@ -1,0 +1,19 @@
+ops_servers:
+- recomserver
+- rewardserver
+recomserver:
+  host: 0.0.0.0
+  ports:
+  - 4001
+  prebuild_path: src
+  server_name: recomserver
+  serving: true
+  workers: 4
+rewardserver:
+  host: 0.0.0.0
+  ports:
+  - 5001
+  prebuild_path: src
+  server_name: rewardserver
+  serving: true
+  workers: 4
