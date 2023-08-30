@@ -7,6 +7,8 @@ import numpy as np
 import os
 import json
 
+from utils import debug_log
+
 
 class RecomServer(Model):
     CONFIGURATIONS = {"recomserver": {}}
@@ -23,18 +25,14 @@ class RecomServer(Model):
         uid = items.get("uid")
         request_id = items.get("request_id")
         try:
-            model_name = "model_name"
-            debug_key = f"{model_name}:debug"
-            debug_param = self.debug_db.get(debug_key)
+            debug_log(
+                items=items,
+                model_name="model-name",
+                debug_db=self.debug_db,
+                logs_debug=self.recom_logs_debug,
+                request_id=request_id,
+            )
 
-            # 检查是否设置了调试参数
-            if debug_param == "1":
-                debug_log_file = os.path.join(
-                    self.recom_logs_debug, f"{request_id}_params.txt"
-                )
-                # 将请求参数写入调试日志文件
-                with open(debug_log_file, "w") as f:
-                    f.write(json.dumps(items))
             return items
         except:
             # 将异常堆栈信息写入错误日志文件
